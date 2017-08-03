@@ -57,6 +57,7 @@ export default class HomePage extends Component {
     this.renderHeader = this.renderHeader.bind(this);
     this.renderCell = this.renderCell.bind(this);
     this.keyExtractor = this.keyExtractor.bind(this);
+    this.onCellSelected = this.onCellSelected.bind(this);
   }
 
   componentDidMount() {
@@ -122,8 +123,12 @@ export default class HomePage extends Component {
 
   renderCell(info) {
     return (
-      <Cell info={info.item} onPress={() => { }} />
+      <Cell info={info.item} onPress={this.onCellSelected} />
     );
+  }
+
+  onCellSelected(info) {
+     this.props.navigation.navigate("Detail", info)
   }
 
   renderHeader() {

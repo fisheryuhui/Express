@@ -15,14 +15,14 @@ export default class HomeCell extends Component {
         let { info } = this.props;
         let imgurl = info.imgurl.replace('w.h', '120.0');
         return (
-            <TouchableOpacity style={styles.container} onPress={this.props.onPress(info)}>
+            <TouchableOpacity style={styles.container} onPress={() => this.props.onPress(info)}>
                 <Image style={styles.icon} source={{ uri: imgurl }}></Image>
                 <View style={styles.rightContainer}>
                     <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#222222' }} >{info.mname}</Text>
                     <View></View>
                     <Text numberOfLines={0} style={{ marginTop: 8, fontSize: 13, color: '#777777' }}>{info.title}</Text>
                     <View style={{ flex: 1, justifyContent: 'flex-end' }}>
-                        <Text style={[styles.price, { fontSize: 15, fontWeight: 'bold'}]}>{info.price}元</Text>
+                        <Text style={[styles.price, { fontSize: 15, fontWeight: 'bold' }]}>{info.price}元</Text>
                     </View>
                 </View>
             </TouchableOpacity>
