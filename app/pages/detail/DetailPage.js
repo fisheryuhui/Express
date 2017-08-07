@@ -21,7 +21,7 @@ export default class DetailPage extends Component {
             <NavigationItem
                 iconStyle={{ margin: 8 }}
                 icon={require('../../images/public/icon_navigationItem_share.png')}
-                onPress={() => { }}
+                onPress={() => {}}
             />
         ),
     });
