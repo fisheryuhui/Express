@@ -128,7 +128,7 @@ export default class HomePage extends Component {
   }
 
   onCellSelected(info) {
-     this.props.navigation.navigate("Detail", info)
+     this.props.navigation.navigate("Detail", {info:info})
   }
 
   renderHeader() {
